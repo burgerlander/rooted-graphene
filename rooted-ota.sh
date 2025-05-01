@@ -58,7 +58,7 @@ FORCE_BUILD=${FORCE_BUILD:-'false'}
 # Takes precedence over FORCE_OTA_SERVER_UPLOAD
 SKIP_OTA_SERVER_UPLOAD=${SKIP_OTA_SERVER_UPLOAD:-'false'}
 # Skip patching modules (custota and oemunlockunboot) into OTA
-SKIP_MODULES=${SKIP_MODULES:-'false'}
+SKIP_MODULES=${SKIP_MODULES:-'true'}
 # Upload OTA to test folder on OTA server
 UPLOAD_TEST_OTA=${UPLOAD_TEST_OTA:-false}
 
