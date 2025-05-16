@@ -67,7 +67,7 @@ NO_COLOR=${NO_COLOR:-''}
 OTA_BASE_URL="https://releases.grapheneos.org"
 
 # renovate: datasource=github-releases packageName=chenxiaolong/avbroot versioning=semver
-AVB_ROOT_VERSION=3.15.0
+AVB_ROOT_VERSION=3.16.0
 # renovate: datasource=github-releases packageName=chenxiaolong/Custota versioning=semver-coerced
 CUSTOTA_VERSION=5.7
 # renovate: datasource=git-refs packageName=https://github.com/chenxiaolong/my-avbroot-setup currentValue=master
@@ -349,14 +349,15 @@ function patchOTAs() {
       # We need to add .tmp to PATH, but we can't use $PATH: because this would be the PATH of the host not the container
       # Python image is designed to run as root, so chown the files it creates back at the end
       # ... room for improvement 😐️
-      docker run --rm -v "$PWD:/app"  -w /app \
+      # shellcheck disable=SC2046
+      docker run --rm -i $(tty &>/dev/null && echo '-t') -v "$PWD:/app"  -w /app \
         -e PATH='/bin:/usr/local/bin:/sbin:/usr/bin/:/app/.tmp' \
-        -e PASSPHRASE_AVB="$PASSPHRASE_AVB" -e PASSPHRASE_OTA="$PASSPHRASE_OTA" \
+        --env-file <(env) \
         python:${PYTHON_VERSION} sh -c \
           "apk add openssh && \
            pip install -r .tmp/my-avbroot-setup/requirements.txt && \
-           python .tmp/my-avbroot-setup/patch.py ${args[*]} && \
-           chown -R $(id -u):$(id -g) .tmp"
+           python .tmp/my-avbroot-setup/patch.py ${args[*]} ; result=\$?; \
+           chown -R $(id -u):$(id -g) .tmp; exit \$result"
     
        printGreen "Finished patching file ${targetFile}"
     fi
