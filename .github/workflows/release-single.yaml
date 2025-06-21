@@ -1,7 +1,9 @@
 name: Release single device
 
 on:
-  # Note that push/PR will not release, only build to see if there are obvious failures
+  schedule: 
+    - cron: "10 20 * * *"
+  # Note that push/PR will not release, onl- cron: "15 4,5 * * *y build to see if there are obvious failures
   push:
     branches:
       - '*'
