@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025071900/shiba-2025071900-c75af7b-magisk-v29.0-minimal.zip",
-    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025071900/shiba-2025071900-c75af7b-magisk-v29.0-minimal.zip.csig"
+    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025073000/shiba-2025073000-c75af7b-magisk-v29.0-minimal.zip",
+    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025073000/shiba-2025073000-c75af7b-magisk-v29.0-minimal.zip.csig"
   }
 }
