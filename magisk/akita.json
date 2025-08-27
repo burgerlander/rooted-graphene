@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025080600/akita-2025080600-c75af7b-magisk-v29.0-minimal.zip",
-    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025080600/akita-2025080600-c75af7b-magisk-v29.0-minimal.zip.csig"
+    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025081400/akita-2025081400-0426405-magisk-v29.0-minimal.zip",
+    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025081400/akita-2025081400-0426405-magisk-v29.0-minimal.zip.csig"
   }
 }
