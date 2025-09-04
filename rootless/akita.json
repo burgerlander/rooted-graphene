@@ -1,7 +1,7 @@
 {
   "version": 2,
   "full": {
-    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025081400/akita-2025081400-0426405-rootless-minimal.zip",
-    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025081400/akita-2025081400-0426405-rootless-minimal.zip.csig"
+    "location_ota": "https://github.com/burgerlander/rooted-graphene/releases/download/2025090300/akita-2025090300-0426405-rootless-minimal.zip",
+    "location_csig": "https://github.com/burgerlander/rooted-graphene/releases/download/2025090300/akita-2025090300-0426405-rootless-minimal.zip.csig"
   }
 }
